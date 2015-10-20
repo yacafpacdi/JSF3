@@ -1,10 +1,23 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 19 oct. 2015, 16:30:30
-    Author     : cdi403
-*/
+.info{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: bold
+}
 
+.col1{
+    background-color: #ccccff
+}
+
+.col2{
+    background-color: #ffcccc
+}
+
+.col3{
+    background-color: #ffcc66
+}
+
+.entete{
+    font-family: 'Times New Roman',Times,serif;
+    font-size: 14px;
+    font-weight: bold
+}

@@ -3,9 +3,124 @@ package forms;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-
 @ManagedBean
 @RequestScoped
 public class Form {
-    
+
+    //champs du formulaire
+    private String inputText = "texte";
+    private String inputSecret = "secret";
+    private String inputTextArea = "ligne1\nligne2\n";
+    private String selectOneListBox1 = "2";
+    private String selectOneListBox2 = "3";
+    private String[] selectManyListBox = new String[]{"1", "3"};
+    private String selectOneMenu = "1";
+    private String[] selectManyMenu = new String[]{"1", "2"};
+    private String inputHidden = "initial";
+    private boolean selectBooleanCheckBox = true;
+    private String[] selectManyCheckBox = new String[]{"1", "3"};
+    private String selectOneRadio = "2";
+
+    //événements
+    public String submit() {
+        return null;
+    }
+
+    //getters et setters
+    public String getInputText() {
+        return inputText;
+    }
+
+    public void setInputText(String inputText) {
+        this.inputText = inputText;
+    }
+
+    public String getInputSecret() {
+        return inputSecret;
+    }
+
+    public void setInputSecret(String inputSecret) {
+        this.inputSecret = inputSecret;
+    }
+
+    public String getInputTextArea() {
+        return inputTextArea;
+    }
+
+    public void setInputTextArea(String inputTextArea) {
+        this.inputTextArea = inputTextArea;
+    }
+
+    public String getSelectOneListBox1() {
+        return selectOneListBox1;
+    }
+
+    public void setSelectOneListBox1(String selectOneListBox1) {
+        this.selectOneListBox1 = selectOneListBox1;
+    }
+
+    public String getSelectOneListBox2() {
+        return selectOneListBox2;
+    }
+
+    public void setSelectOneListBox2(String selectOneListBox2) {
+        this.selectOneListBox2 = selectOneListBox2;
+    }
+
+    public String[] getSelectManyListBox() {
+        return selectManyListBox;
+    }
+
+    public void setSelectManyListBox(String[] selectManyListBox) {
+        this.selectManyListBox = selectManyListBox;
+    }
+
+    public String getSelectOneMenu() {
+        return selectOneMenu;
+    }
+
+    public void setSelectOneMenu(String selectOneMenu) {
+        this.selectOneMenu = selectOneMenu;
+    }
+
+    public String[] getSelectManyMenu() {
+        return selectManyMenu;
+    }
+
+    public void setSelectManyMenu(String[] selectManyMenu) {
+        this.selectManyMenu = selectManyMenu;
+    }
+
+    public String getInputHidden() {
+        return inputHidden;
+    }
+
+    public void setInputHidden(String inputHidden) {
+        this.inputHidden = inputHidden;
+    }
+
+    public boolean isSelectBooleanCheckBox() {
+        return selectBooleanCheckBox;
+    }
+
+    public void setSelectBooleanCheckBox(boolean selectBooleanCheckBox) {
+        this.selectBooleanCheckBox = selectBooleanCheckBox;
+    }
+
+    public String[] getSelectManyCheckBox() {
+        return selectManyCheckBox;
+    }
+
+    public void setSelectManyCheckBox(String[] selectManyCheckBox) {
+        this.selectManyCheckBox = selectManyCheckBox;
+    }
+
+    public String getSelectOneRadio() {
+        return selectOneRadio;
+    }
+
+    public void setSelectOneRadio(String selectOneRadio) {
+        this.selectOneRadio = selectOneRadio;
+    }
+
 }

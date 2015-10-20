@@ -1,12 +1,81 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        Hello from Facelets
-    </h:body>
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <f:view locale="#{changeLocale.locale}">
+        <h:head>
+            <title>JSF</title>
+            <h:outputStylesheet library="css" name="styles.css" />
+        </h:head>
+        <h:body style="background-image: url('${request.contextPath}/resources/images/standard.jpg');">
+            <h:form id="formulaire">
+                <!-- langues -->
+                <h:panelGrid columns="2">
+                    <h:commandLink value="#{msg['form.langue1']}" action="#{changeLocale.setFrenchLocale}"/>
+                    <h:commandLink value="#{msg['form.langue2']}" action="#{changeLocale.setEnglishLocale}"/>
+                </h:panelGrid>
+                <h1><h:outputText value="#{msg['form.titre']}"/></h1>
+                <h:panelGrid columnClasses="col1,col2,col3" columns="3" border="1">
+                    <!-- entêtes -->
+                    <h:outputText value="#{msg['form.headerCol1']}" styleClass="entete"/>
+                    <h:outputText value="#{msg['form.headerCol2']}" styleClass="entete"/>
+                    <h:outputText value="#{msg['form.headerCol3']}" styleClass="entete"/>
+                    <!-- ligne 1 -->
+                    <h:outputText value="inputText"  styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.loginPrompt']}"/>
+                        <h:inputText id="inputText" value="#{form.inputText}"/>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.inputText}"/>
+                    <!-- ligne 2 -->
+                    <h:outputText value="inputSecret"  styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.passwdPrompt']}"/>
+                        <h:inputSecret id="inputSecret" value="#{form.inputSecret}"/>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.inputSecret}"/>
+                    <!-- ligne 3 -->
+                    <h:outputText value="inputTextArea" styleClass="info"/>          
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.descPrompt']}"/>
+                        <h:inputTextarea id="inputTextArea" value="#{form.inputTextArea}" rows="4"/>
+                    </h:panelGroup>         
+                    <h:outputText value="#{form.inputTextArea}"/>
+                    <!-- ligne 4 -->
+                    <h:outputText value="selectOneListBox (size=1)" styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.selectOneListBox1Prompt']}"/>
+                        <h:selectOneListbox id="selectOneListBox1" value="#{form.selectOneListBox1}" size="1">
+                            <f:selectItem itemValue="1" itemLabel="un"/>
+                            <f:selectItem itemValue="2" itemLabel="deux"/>
+                            <f:selectItem itemValue="3" itemLabel="trois"/>
+                        </h:selectOneListbox>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.selectOneListBox1}"/>
+                    <!-- ligne 5 -->
+                    ...
+                    <!-- ligne 6 -->
+                    ...
+                    <!-- ligne 7 -->
+                    ...
+                    <!-- ligne 8 -->
+                    ...
+                    <!-- ligne 9 -->
+                    ...
+                    <!-- ligne 10 -->
+                    ...
+                    <!-- ligne 11 -->
+                    ...
+                    <!-- ligne 12 -->
+                    ...
+                </h:panelGrid>
+                <p>
+                    <h:commandButton type="submit" id="submit" value="#{msg['form.submitText']}"/>
+                </p>
+            </h:form>
+        </h:body>
+    </f:view>
 </html>
 
