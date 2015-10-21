@@ -55,17 +55,70 @@
                     </h:panelGroup>
                     <h:outputText value="#{form.selectOneListBox1}"/>
                     <!-- ligne 5 -->
-                    ...
+                    <h:outputText value="selectOneListBox (size=3)" styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.selectOneListBox2Prompt']}"/>
+                        <h:selectOneListbox id="selectOneListBox2" value="#{form.selectOneListBox2}" size="3">
+                            <f:selectItem itemValue="1" itemLabel="un"/>
+                            <f:selectItem itemValue="2" itemLabel="deux"/>
+                            <f:selectItem itemValue="3" itemLabel="trois"/>
+                            <f:selectItem itemValue="4" itemLabel="quatre"/>
+                            <f:selectItem itemValue="5" itemLabel="cinq"/>
+                        </h:selectOneListbox>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.selectOneListBox2}"/>
                     <!-- ligne 6 -->
-                    ...
+                    <h:outputText value="selectManyListBox (size=3)"  styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.selectManyListBoxPrompt']}"/>
+                        <h:selectManyListbox id="selectManyListBox" value="#{form.selectManyListBox}" size="3">
+                            <f:selectItem itemValue="1" itemLabel="un"/>
+                            <f:selectItem itemValue="2" itemLabel="deux"/>
+                            <f:selectItem itemValue="3" itemLabel="trois"/>
+                            <f:selectItem itemValue="4" itemLabel="quatre"/>
+                            <f:selectItem itemValue="5" itemLabel="cinq"/>
+                        </h:selectManyListbox>
+                        <p><input type="button" value="#{msg['form.buttonRazText']}" onclick="this.form['formulaire:selectManyListBox'].selectedIndex = -1;" /></p>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.selectManyListBoxValue}"/>
                     <!-- ligne 7 -->
-                    ...
+                    <h:outputText value="selectOneMenu" styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.selectOneMenuPrompt']}"/>
+                        <h:selectOneMenu id="selectOneMenu" value="#{form.selectOneMenu}">
+                            <f:selectItem itemValue="1" itemLabel="un"/>
+                            <f:selectItem itemValue="2" itemLabel="deux"/>
+                            <f:selectItem itemValue="3" itemLabel="trois"/>
+                            <f:selectItem itemValue="4" itemLabel="quatre"/>
+                            <f:selectItem itemValue="5" itemLabel="cinq"/>
+                        </h:selectOneMenu>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.selectOneMenu}"/>
                     <!-- ligne 8 -->
-                    ...
+                    <h:outputText value="selectManyMenu" styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.selectManyMenuPrompt']}" styleClass="prompt" />
+                        <h:selectManyMenu id="selectManyMenu" value="#{form.selectManyMenu}" >
+                            <f:selectItem itemValue="1" itemLabel="un"/>
+                            <f:selectItem itemValue="2" itemLabel="deux"/>
+                            <f:selectItem itemValue="3" itemLabel="trois"/>
+                            <f:selectItem itemValue="4" itemLabel="quatre"/>
+                            <f:selectItem itemValue="5" itemLabel="cinq"/>
+                        </h:selectManyMenu>
+                        <p><input type="button" value="#{msg['form.buttonRazText']}" onclick="this.form['formulaire:selectManyMenu'].selectedIndex = -1;" /></p>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.selectManyMenuValue}" styleClass="prompt"/>
                     <!-- ligne 9 -->
-                    ...
+                    <h:outputText value="inputHidden"  styleClass="info"/>
+                    <h:inputHidden id="inputHidden" value="#{form.inputHidden}"/>
+                    <h:outputText value="#{form.inputHidden}"/>
                     <!-- ligne 10 -->
-                    ...
+                    <h:outputText value="selectBooleanCheckBox" styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.selectBooleanCheckboxPrompt']}" styleClass="prompt" />
+                        <h:selectBooleanCheckbox id="selectBooleanCheckBox" value="#{form.selectBooleanCheckBox}"/>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.selectBooleanCheckBox}"/>
                     <!-- ligne 11 -->
                     ...
                     <!-- ligne 12 -->
