@@ -6,7 +6,7 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean
 @RequestScoped
 public class Form {
- 
+
     //champs du formulaire
     private String inputText = "texte";
     private String inputSecret = "secret";
@@ -102,12 +102,10 @@ public class Form {
     public void setSelectManyMenu(String[] selectManyMenu) {
         this.selectManyMenu = selectManyMenu;
     }
-    
+
     public String getSelectManyMenuValue() {
         return getValue(selectManyMenu);
     }
-
-  
 
     public String getInputHidden() {
         return inputHidden;
@@ -131,6 +129,10 @@ public class Form {
 
     public void setSelectManyCheckBox(String[] selectManyCheckBox) {
         this.selectManyCheckBox = selectManyCheckBox;
+    }
+
+    public String getSelectManyCheckBoxValue() {
+        return getValue(getSelectManyCheckBox());
     }
 
     public String getSelectOneRadio() {

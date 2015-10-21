@@ -120,9 +120,29 @@
                     </h:panelGroup>
                     <h:outputText value="#{form.selectBooleanCheckBox}"/>
                     <!-- ligne 11 -->
-                    ...
+                    <h:outputText value="selectManyCheckbox" styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.selectManyCheckboxPrompt']}" styleClass="prompt" />
+                        <h:selectManyCheckbox id="selectManyCheckBox" value="#{form.selectManyCheckBox}">
+                            <f:selectItem itemValue="1" itemLabel="rouge"/>
+                            <f:selectItem itemValue="2" itemLabel="bleu"/>
+                            <f:selectItem itemValue="3" itemLabel="blanc"/>
+                            <f:selectItem itemValue="4" itemLabel="noir"/>
+                        </h:selectManyCheckbox>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.selectManyCheckBoxValue}"/>
                     <!-- ligne 12 -->
-                    ...
+                    <h:outputText value="selectOneRadio" styleClass="info"/>
+                    <h:panelGroup>
+                        <h:outputText value="#{msg['form.selectOneRadioPrompt']}" />
+                        <h:selectOneRadio id="selectOneRadio" value="#{form.selectOneRadio}">
+                            <f:selectItem itemValue="1" itemLabel="voiture"/>
+                            <f:selectItem itemValue="2" itemLabel="vélo"/>
+                            <f:selectItem itemValue="3" itemLabel="scooter"/>
+                            <f:selectItem itemValue="4" itemLabel="marche"/>
+                        </h:selectOneRadio>
+                    </h:panelGroup>
+                    <h:outputText value="#{form.selectOneRadio}"/>
                 </h:panelGrid>
                 <p>
                     <h:commandButton type="submit" id="submit" value="#{msg['form.submitText']}"/>
