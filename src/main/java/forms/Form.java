@@ -8,7 +8,7 @@ import javax.faces.bean.RequestScoped;
 public class Form {
 
     //champs du formulaire
-    private String inputText = "texte";
+    private String inputText ;
     private String inputSecret = "secret";
     private String inputTextArea = "ligne1\nligne2\n";
     private String selectOneListBox1 = "2";
